@@ -2,7 +2,7 @@ class Paperboy
 
   attr_reader :earnings
 
-  attr_accessor :name, :quota, :experience, :side, :earnings
+  attr_accessor :name, :quota, :experience, :side
 
   def initialize(name, side)
     @name = name
