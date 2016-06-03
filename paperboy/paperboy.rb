@@ -19,18 +19,15 @@ class Paperboy
   def deliver(start_address, end_address) # ----- number of houses !!!! adjust for even or odd side
 
       houses = end_address - start_address
-      puts houses
       over_quota = houses - quota
-      puts over_quota
       @experience = @experience + houses
-
-        if houses > quota
-          total = 0.25 * quota  + 0.50 * over_quota #this line does not work!!!
-          puts total
-        end
 
         if houses < quota
           @earnings = @earnings - 2.00
+        else
+          total = 0.25 * quota  + 0.50 * over_quota
+          puts total
+          @earnings = @earnings + total
         end
   end
 
