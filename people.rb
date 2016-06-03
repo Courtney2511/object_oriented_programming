@@ -4,6 +4,10 @@ class Person
     @name = name
   end
 
+  def greeting
+    "hi my name is #{@name}"
+  end
+
 end
 
 
@@ -22,3 +26,6 @@ class Instructor < Person
   end
 
 end
+
+chris = Instructor.new('Chris')
+puts chris.greeting
